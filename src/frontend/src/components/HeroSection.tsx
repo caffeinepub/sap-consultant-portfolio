@@ -114,7 +114,7 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src="/assets/uploads/Abhinit-1.png"
+                  src="/assets/uploads/WhatsApp-Image-2026-03-21-at-9.10.20-AM-1.jpeg"
                   alt="Abhinit"
                   className="w-full h-full object-cover object-top"
                 />

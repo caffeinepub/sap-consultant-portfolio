@@ -2,7 +2,10 @@ import { Award } from "lucide-react";
 import { motion } from "motion/react";
 
 const certs = [
-  { title: "Bachelor of Engineering", subtitle: "Mechanical Engineering" },
+  {
+    title: "Diploma in Mechanical Engineering",
+    subtitle: "Mechanical Engineering",
+  },
   { title: "Diploma", subtitle: "SAP MM & Logistics" },
   { title: "SAP Certified", subtitle: "SAP PP (Production Planning)" },
 ];
