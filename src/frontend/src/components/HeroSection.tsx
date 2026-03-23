@@ -3,26 +3,26 @@ import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 
 const specialties = [
+  "Production Planning & Control – MRP, BOM, Routing & Production Orders",
+  "SAP PP – Demand Management, Capacity Planning & Shop Floor Control",
   "SAP MM – Procurement, Inventory & Vendor Management",
-  "SAP PP – MRP, BOM, Routing & Production Orders",
   "SAP S/4HANA Configuration & Implementation",
-  "SAP HANA Real-Time Reporting & Performance Optimization",
 ];
 
 export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-screen flex items-center bg-background"
+      className="relative overflow-hidden min-h-screen flex items-center"
     >
-      {/* SAP-style top accent bar */}
+      {/* Top accent bar */}
       <div
-        className="absolute top-0 left-0 right-0 h-1"
+        className="absolute top-0 left-0 right-0 h-1 z-10"
         style={{ backgroundColor: "oklch(var(--sap-blue))" }}
         aria-hidden="true"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -49,13 +49,14 @@ export default function HeroSection() {
                   color: "oklch(var(--foreground))",
                 }}
               >
-                SAP CONSULTANT
+                PPC ENGINEER
               </span>
             </h1>
 
             <p className="text-muted-foreground text-lg leading-relaxed">
-              MM &amp; PP Specialist with 10+ years of cross-industry experience
-              configuring and supporting end-to-end SAP business processes.
+              Production Planning &amp; Control Specialist with 10+ years of
+              cross-industry experience in SAP PP, MRP, BOM, and end-to-end
+              manufacturing process optimization.
             </p>
 
             <ul className="space-y-3">
@@ -90,6 +91,7 @@ export default function HeroSection() {
                 style={{
                   borderColor: "oklch(var(--sap-blue))",
                   color: "oklch(var(--sap-blue))",
+                  backgroundColor: "transparent",
                 }}
                 data-ocid="hero.secondary_button"
               >
@@ -110,7 +112,7 @@ export default function HeroSection() {
                 className="relative rounded-lg w-72 lg:w-80 h-80 bg-card border overflow-hidden"
                 style={{
                   borderColor: "oklch(var(--sap-blue) / 0.4)",
-                  boxShadow: "0 4px 24px rgba(0,112,242,0.15)",
+                  boxShadow: "0 4px 24px rgba(0,112,242,0.25)",
                 }}
               >
                 <img
@@ -139,7 +141,7 @@ export default function HeroSection() {
                 className="absolute -top-4 -right-4 rounded-lg p-4 bg-card border"
                 style={{
                   borderColor: "oklch(var(--sap-blue) / 0.3)",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
                 }}
               >
                 <div
@@ -149,7 +151,7 @@ export default function HeroSection() {
                   3
                 </div>
                 <div className="text-xs text-muted-foreground font-medium">
-                  SAP Projects
+                  PPC Projects
                 </div>
               </div>
             </div>

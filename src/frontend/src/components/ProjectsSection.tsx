@@ -2,24 +2,24 @@ import { motion } from "motion/react";
 
 const projects = [
   {
-    title: "SAP Implementation – Hero Motocorp",
+    title: "PPC Implementation – Hero Motocorp",
     company: "Hero Motocorp Ltd.",
-    desc: "SAP operations support for India's largest two-wheeler manufacturer. Handled MM/PP module support, inventory management, and production planning for large-scale automotive manufacturing.",
-    tags: ["SAP MM", "SAP PP", "MRP", "Operations"],
+    desc: "Production Planning & Control support for India's largest two-wheeler manufacturer. Managed MRP, production orders, BOM, routing, and capacity planning for large-scale automotive manufacturing operations.",
+    tags: ["SAP PP", "MRP", "BOM", "Routing", "Operations"],
     badge: 1,
   },
   {
-    title: "SAP MM/PP Support – Greenply Industries",
+    title: "PPC & MM Support – Greenply Industries",
     company: "Greenply Industries Limited",
-    desc: "SAP implementation and support for MM and PP modules in a leading wood panel manufacturer. Configured material master, BOM, routing, and MRP processes to streamline production workflows.",
-    tags: ["SAP MM", "SAP PP", "BOM", "Routing", "MRP"],
+    desc: "SAP PP and MM implementation and support for a leading wood panel manufacturer. Configured material master, BOM, routing, and MRP processes to streamline production workflows and inventory management.",
+    tags: ["SAP PP", "SAP MM", "BOM", "Routing", "MRP"],
     badge: 2,
   },
   {
-    title: "SAP Project Engineering – Elixrr Industries",
+    title: "PPC Project Engineering – Elixrr Industries",
     company: "Elixrr Industries",
-    desc: "Leading ongoing SAP project implementation as Project Engineer. Responsible for business process mapping, gap analysis, functional specifications, and go-live support using ASAP methodology.",
-    tags: ["S/4HANA", "Configuration", "ASAP", "Business Process"],
+    desc: "Leading ongoing Production Planning & Control project implementation as Project Engineer. Responsible for business process mapping, gap analysis, functional specifications, and go-live support using ASAP methodology.",
+    tags: ["S/4HANA", "PPC", "Configuration", "ASAP", "Business Process"],
     badge: 3,
   },
 ];
@@ -41,7 +41,7 @@ export default function ProjectsSection() {
         Portfolio
       </div>
       <h2 className="font-sans text-2xl font-bold text-foreground mb-6">
-        Featured Projects
+        Production Planning & Control Projects
       </h2>
       <div className="space-y-5">
         {projects.map((project) => (
@@ -78,9 +78,9 @@ export default function ProjectsSection() {
                     key={tag}
                     className="text-xs rounded px-2 py-0.5 font-medium"
                     style={{
-                      backgroundColor: "oklch(0.52 0.22 260 / 0.08)",
-                      color: "oklch(var(--sap-blue))",
-                      border: "1px solid oklch(0.52 0.22 260 / 0.2)",
+                      backgroundColor: "oklch(0.52 0.22 260 / 0.18)",
+                      color: "oklch(var(--sap-blue-light))",
+                      border: "1px solid oklch(0.52 0.22 260 / 0.3)",
                     }}
                   >
                     {tag}

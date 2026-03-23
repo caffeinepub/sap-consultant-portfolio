@@ -11,39 +11,40 @@
     /* SAP color tokens in OKLCH */
     --sap-blue: 0.52 0.22 260;
     --sap-blue-light: 0.62 0.18 260;
-    --sap-shell: 0.35 0.06 239;
+    --sap-shell: 0.2 0.04 239;
 
-    --background: 0.97 0.003 248;
-    --foreground: 0.25 0.008 252;
-    --card: 1 0 0;
-    --card-foreground: 0.25 0.008 252;
-    --popover: 1 0 0;
-    --popover-foreground: 0.25 0.008 252;
+    /* Dark theme tokens — semi-transparent cards to let bg show through */
+    --background: 0.12 0.02 260;
+    --foreground: 0.95 0 0;
+    --card: 0.14 0.025 260;
+    --card-foreground: 0.95 0 0;
+    --popover: 0.16 0.025 260;
+    --popover-foreground: 0.95 0 0;
     --primary: 0.52 0.22 260;
     --primary-foreground: 1 0 0;
-    --secondary: 0.97 0.003 248;
-    --secondary-foreground: 0.25 0.008 252;
-    --muted: 0.95 0 0;
-    --muted-foreground: 0.49 0.005 252;
+    --secondary: 0.18 0.02 260;
+    --secondary-foreground: 0.95 0 0;
+    --muted: 0.2 0.015 260;
+    --muted-foreground: 0.65 0.01 260;
     --accent: 0.52 0.22 260;
     --accent-foreground: 1 0 0;
     --destructive: 0.577 0.245 27.325;
     --destructive-foreground: 0.985 0 0;
-    --border: 0.87 0 0;
-    --input: 0.87 0 0;
+    --border: 0.25 0.02 260;
+    --input: 0.2 0.02 260;
     --ring: 0.52 0.22 260;
     --chart-1: 0.52 0.22 260;
     --chart-2: 0.62 0.18 260;
     --chart-3: 0.72 0.14 260;
     --chart-4: 0.45 0.12 260;
     --chart-5: 0.38 0.08 260;
-    --sidebar: 0.35 0.06 239;
-    --sidebar-foreground: 1 0 0;
+    --sidebar: 0.14 0.025 260;
+    --sidebar-foreground: 0.95 0 0;
     --sidebar-primary: 0.52 0.22 260;
     --sidebar-primary-foreground: 1 0 0;
-    --sidebar-accent: 0.28 0.05 239;
-    --sidebar-accent-foreground: 1 0 0;
-    --sidebar-border: 0.28 0.05 239;
+    --sidebar-accent: 0.2 0.02 260;
+    --sidebar-accent-foreground: 0.95 0 0;
+    --sidebar-border: 0.25 0.02 260;
     --sidebar-ring: 0.52 0.22 260;
   }
 
@@ -51,14 +52,25 @@
     @apply border-border;
   }
 
-  html {
+  html,
+  body {
+    background: transparent;
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: "IBM Plex Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Semi-transparent cards so the PPC background peeks through */
+  .bg-card {
+    background-color: oklch(var(--card) / 0.85) !important;
+  }
+
+  .bg-background {
+    background-color: transparent !important;
   }
 }
 
@@ -88,9 +100,9 @@
     background: linear-gradient(
       90deg,
       oklch(0.52 0.22 260) 0%,
-      oklch(0.62 0.18 260) 35%,
-      oklch(0.72 0.14 260) 50%,
-      oklch(0.62 0.18 260) 65%,
+      oklch(0.72 0.18 260) 35%,
+      oklch(0.85 0.14 260) 50%,
+      oklch(0.72 0.18 260) 65%,
       oklch(0.52 0.22 260) 100%
     );
     background-size: 200% auto;

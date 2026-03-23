@@ -40,7 +40,7 @@ export default function CertificationsSection() {
           >
             <div
               className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-              style={{ backgroundColor: "oklch(0.52 0.22 260 / 0.1)" }}
+              style={{ backgroundColor: "oklch(0.52 0.22 260 / 0.18)" }}
             >
               <Award size={18} style={{ color: "oklch(var(--sap-blue))" }} />
             </div>

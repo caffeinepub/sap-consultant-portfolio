@@ -33,7 +33,7 @@ export default function NavBar() {
             className="text-white font-semibold text-base tracking-wide"
             data-ocid="nav.link"
           >
-            ABHINIT SAP CONSULTANT
+            ABHINIT PPC ENGINEER
           </a>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -52,7 +52,7 @@ export default function NavBar() {
               className="ml-3 bg-sap-blue text-white hover:bg-sap-blue-light rounded px-5 text-sm font-semibold h-8"
               data-ocid="nav.primary_button"
             >
-              <a href="#contact">Request Consultation</a>
+              <a href="#contact">Get In Touch</a>
             </Button>
           </div>
 
@@ -97,7 +97,7 @@ export default function NavBar() {
                 }}
                 data-ocid="nav.primary_button"
               >
-                Request Consultation
+                Get In Touch
               </Button>
             </div>
           </motion.div>

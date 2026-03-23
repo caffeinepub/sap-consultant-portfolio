@@ -2,9 +2,14 @@ import { motion } from "motion/react";
 
 const skills = [
   {
-    icon: "🏗️",
-    title: "SAP S/4HANA",
-    desc: "Configuration, implementation support, IMG settings, and migration planning.",
+    icon: "🏭",
+    title: "Production Planning & Control",
+    desc: "MRP, BOM, routing, production orders, capacity planning, demand management, and shop floor control.",
+  },
+  {
+    icon: "🔄",
+    title: "SAP PP",
+    desc: "Demand management, MRP, production orders, BOM, routing, and capacity planning configuration.",
   },
   {
     icon: "📦",
@@ -12,14 +17,9 @@ const skills = [
     desc: "P2P procurement, inventory management, vendor management, material master, pricing & invoice verification.",
   },
   {
-    icon: "🔄",
-    title: "SAP PP",
-    desc: "Demand management, MRP, production orders, BOM, routing, and capacity planning.",
-  },
-  {
-    icon: "📊",
-    title: "SAP HANA",
-    desc: "Real-time data processing, reporting, and performance optimization.",
+    icon: "🏗️",
+    title: "SAP S/4HANA",
+    desc: "Configuration, implementation support, IMG settings, and migration planning.",
   },
   {
     icon: "📈",
@@ -50,7 +50,7 @@ export default function SkillsSection() {
         Expertise
       </div>
       <h2 className="font-sans text-2xl font-bold text-foreground mb-6">
-        SAP Skills & Expertise
+        PPC Skills & Expertise
       </h2>
       <div className="grid grid-cols-2 gap-4">
         {skills.map((skill, i) => (
@@ -64,7 +64,7 @@ export default function SkillsSection() {
           >
             <div
               className="w-10 h-10 rounded-lg flex items-center justify-center text-xl mb-3"
-              style={{ backgroundColor: "oklch(0.52 0.22 260 / 0.08)" }}
+              style={{ backgroundColor: "oklch(0.52 0.22 260 / 0.15)" }}
             >
               {skill.icon}
             </div>

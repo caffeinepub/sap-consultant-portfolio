@@ -15,11 +15,33 @@ const queryClient = new QueryClient();
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-background font-sans">
+      {/* Fixed full-page PPC background */}
+      <div
+        className="fixed inset-0 -z-10"
+        style={{
+          backgroundImage:
+            "url('/assets/generated/ppc-background.dim_1920x1080.jpg')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+        }}
+        aria-hidden="true"
+      />
+      {/* Dark overlay for readability */}
+      <div
+        className="fixed inset-0 -z-10"
+        style={{ backgroundColor: "rgba(0,0,0,0.78)" }}
+        aria-hidden="true"
+      />
+
+      <div
+        className="min-h-screen font-sans"
+        style={{ background: "transparent" }}
+      >
         <NavBar />
         <main>
           <HeroSection />
-          <div className="bg-background">
+          <div style={{ background: "transparent" }}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
               <AboutSection />
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

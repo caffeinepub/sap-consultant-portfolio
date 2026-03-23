@@ -24,7 +24,7 @@ export default function Footer() {
               ABHINIT UPADHYAY
             </div>
             <div className="text-white/60 text-sm">
-              SAP S/4HANA Consultant | MM &amp; PP Specialist
+              PPC Engineer | Production Planning &amp; Control Specialist
             </div>
           </div>
 

@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useSubmitContactForm } from "@/hooks/useQueries";
-import { Loader2, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -15,17 +14,15 @@ export default function ContactSection() {
     subject: "",
     message: "",
   });
-  const { mutateAsync, isPending } = useSubmitContactForm();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      await mutateAsync(form);
-      toast.success("Message sent! I'll get back to you within 24 hours.");
-      setForm({ name: "", email: "", subject: "", message: "" });
-    } catch {
-      toast.error("Failed to send message. Please try again.");
-    }
+    const text = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nSubject: ${form.subject}\nMessage: ${form.message}`,
+    );
+    window.open(`https://wa.me/917091391375?text=${text}`, "_blank");
+    toast.success("Opening WhatsApp to send your message!");
+    setForm({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -47,7 +44,7 @@ export default function ContactSection() {
         Contact
       </h2>
       <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-        Ready to discuss your SAP project? Let's connect.
+        Ready to discuss your PPC project? Let's connect.
       </p>
 
       <div className="space-y-2 mb-6">
@@ -64,6 +61,49 @@ export default function ContactSection() {
             <span>{text}</span>
           </div>
         ))}
+      </div>
+
+      {/* Quick contact buttons */}
+      <div className="flex gap-3 mb-6">
+        <a
+          href="https://wa.me/917091391375"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1"
+          data-ocid="contact.whatsapp_button"
+        >
+          <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg gap-2">
+            <MessageCircle size={16} />
+            WhatsApp
+          </Button>
+        </a>
+        <a
+          href="mailto:abhinitupadhyay121@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1"
+          data-ocid="contact.email_button"
+        >
+          <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-lg gap-2">
+            <Mail size={16} />
+            Email Directly
+          </Button>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/abhinit-kumar-500105377"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1"
+          data-ocid="contact.linkedin_button"
+        >
+          <Button
+            className="w-full font-semibold rounded-lg gap-2"
+            style={{ backgroundColor: "#0077b5", color: "white" }}
+          >
+            <Linkedin size={16} />
+            LinkedIn
+          </Button>
+        </a>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-3">
@@ -134,7 +174,7 @@ export default function ContactSection() {
           </Label>
           <Textarea
             id="contact-message"
-            placeholder="Tell me about your SAP project..."
+            placeholder="Tell me about your PPC project..."
             rows={4}
             value={form.message}
             onChange={(e) =>
@@ -147,17 +187,10 @@ export default function ContactSection() {
         </div>
         <Button
           type="submit"
-          disabled={isPending}
           className="w-full font-semibold rounded-lg bg-primary text-primary-foreground hover:bg-primary/90"
           data-ocid="contact.submit_button"
         >
-          {isPending ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...
-            </>
-          ) : (
-            "Send Message"
-          )}
+          Send via WhatsApp
         </Button>
       </form>
     </motion.section>

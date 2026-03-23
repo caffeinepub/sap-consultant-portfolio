@@ -22,24 +22,24 @@ export default function AboutSection() {
             About Abhinit
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            SAP S/4HANA Consultant specializing in Materials Management (MM) and
-            Production Planning (PP), with hands-on experience in configuring
-            and supporting end-to-end business processes. Skilled in procurement
-            (P2P), inventory management, vendor management, material master
-            data, pricing, and invoice verification within SAP MM.
+            Production Planning &amp; Control (PPC) Engineer with hands-on
+            expertise in SAP PP and MM modules. Specializes in end-to-end
+            production planning processes including demand management, MRP,
+            production orders, BOM, routing, and capacity planning to optimize
+            manufacturing operations.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Proficient in SAP PP processes including demand management, MRP,
-            production orders, BOM, routing, and capacity planning. Experienced
-            in SAP configuration (IMG), business process mapping, gap analysis,
-            and functional specifications. Familiar with SAP Fiori, LSMW, and
-            basic ABAP debugging. Worked in Agile and ASAP methodology
-            environments including incident handling and root cause analysis.
+            Skilled in SAP S/4HANA configuration, business process mapping, gap
+            analysis, and functional specifications. Experienced in procurement
+            (P2P), inventory management, vendor management, and invoice
+            verification. Familiar with SAP Fiori, LSMW, Power BI, and advanced
+            Excel analytics. Worked in Agile and ASAP methodology environments
+            including incident handling and root cause analysis.
           </p>
           <div className="grid grid-cols-3 gap-6 pt-4">
             {[
               { value: "10+", label: "Years Experience" },
-              { value: "3", label: "SAP Projects" },
+              { value: "3", label: "PPC Projects" },
               { value: "5", label: "Companies" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
