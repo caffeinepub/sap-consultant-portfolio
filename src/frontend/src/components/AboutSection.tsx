@@ -38,7 +38,7 @@ export default function AboutSection() {
           </p>
           <div className="grid grid-cols-3 gap-6 pt-4">
             {[
-              { value: "10+", label: "Years Experience" },
+              { value: "8+", label: "Years Experience" },
               { value: "3", label: "PPC Projects" },
               { value: "5", label: "Companies" },
             ].map((stat) => (

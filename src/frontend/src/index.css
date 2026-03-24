@@ -16,7 +16,7 @@
     /* Dark theme tokens — semi-transparent cards to let bg show through */
     --background: 0.12 0.02 260;
     --foreground: 0.95 0 0;
-    --card: 0.14 0.025 260;
+    --card: 0.13 0.02 260;
     --card-foreground: 0.95 0 0;
     --popover: 0.16 0.025 260;
     --popover-foreground: 0.95 0 0;
@@ -64,9 +64,9 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Semi-transparent cards so the PPC background peeks through */
+  /* Semi-transparent cards so the PPC background bleeds through */
   .bg-card {
-    background-color: oklch(var(--card) / 0.85) !important;
+    background-color: oklch(0.13 0.02 260 / 0.82) !important;
   }
 
   .bg-background {

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import NavBar from "./components/NavBar";
 import ProjectsSection from "./components/ProjectsSection";
+import SapModulesSection from "./components/SapModulesSection";
 import SkillsSection from "./components/SkillsSection";
 
 const queryClient = new QueryClient();
@@ -27,10 +28,10 @@ export default function App() {
         }}
         aria-hidden="true"
       />
-      {/* Dark overlay for readability */}
+      {/* Dark overlay for readability — lightened so background shows through */}
       <div
         className="fixed inset-0 -z-10"
-        style={{ backgroundColor: "rgba(0,0,0,0.78)" }}
+        style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
         aria-hidden="true"
       />
 
@@ -48,6 +49,7 @@ export default function App() {
                 <SkillsSection />
                 <ExperienceSection />
               </div>
+              <SapModulesSection />
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <ProjectsSection />
                 <div className="space-y-8">

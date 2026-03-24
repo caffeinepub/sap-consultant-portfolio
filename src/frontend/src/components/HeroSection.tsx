@@ -54,7 +54,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Production Planning &amp; Control Specialist with 10+ years of
+              Production Planning &amp; Control Specialist with 8+ years of
               cross-industry experience in SAP PP, MRP, BOM, and end-to-end
               manufacturing process optimization.
             </p>
@@ -130,7 +130,7 @@ export default function HeroSection() {
                   borderColor: "oklch(var(--sap-blue))",
                 }}
               >
-                <div className="text-2xl font-bold text-white">10+</div>
+                <div className="text-2xl font-bold text-white">8+</div>
                 <div className="text-xs font-medium text-white/85">
                   Years Experience
                 </div>

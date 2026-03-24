@@ -2,34 +2,83 @@ import { motion } from "motion/react";
 
 const experiences = [
   {
-    period: "2025 – Present",
-    role: "Project Engineer",
-    company: "Elixrr Industries",
-    desc: "Leading SAP project implementation and engineering operations, driving process improvements and system configuration.",
+    period: "07/2025 – Present",
+    role: "Project & PPC Engineer",
+    company: "Elixrr Industries Private Limited",
+    location: "Gwalior, IN",
+    bullets: [
+      "Coordinating with cross-functional teams for timely delivery, cost optimization, and quality assurance.",
+      "Transitioning into a PPC Engineer role: production planning, SAP-based material management, and dispatch.",
+      "Recognized for bridging project execution with long-term planning for operational efficiency.",
+      "Releasing monthly, weekly, and daily plans for production activities.",
+      "Coordinating production schedules with various departments.",
+      "Managing the flow of materials and inventory levels in SAP.",
+      "Coordination between production, SCM, QA, and the Feeder Shop to achieve the daily plan.",
+      "Maintained project schedule by monitoring project progress, coordinating activities and resolving problems.",
+      "Monitored work performance against established milestones ensuring adherence to approved schedules.",
+    ],
   },
   {
-    period: "2023 – 2025",
-    role: "Engineer",
-    company: "Greenply Industries Limited",
-    desc: "SAP implementation support for MM and PP modules, including material master configuration, MRP setup, and production planning.",
+    period: "10/2023 – 06/2025",
+    role: "PPC Engineer",
+    company: "Greenply Industries Ltd",
+    location: "Vadodara, IN",
+    bullets: [
+      "Coordination between production, SCM, QA, and the Feeder Shop to achieve the daily plan.",
+      "Managing the E-material flow (EMF) and Material Requirements Planning (MRP).",
+      "Production scheduling in SAP.",
+      "Ensuring optimum inventory levels of OE parts, as per class. Implementing engineering changes with zero non-moving absolution generation.",
+      "Leading a team of sixty contractual laborers and four associates (ILS), assigning them tasks, monitoring their performance, and ensuring adequate training.",
+      "Dispatch planning as per sales requirements.",
+      "Coordinated production schedules based on demand forecasts and resource availability.",
+      "Utilized ERP systems for tracking inventory levels and managing supply chain operations.",
+      "Created and maintained production schedules to ensure on-time deliveries of products.",
+      "Monitored inventory levels and forecasted future requirements for materials.",
+    ],
   },
   {
-    period: "2021 – 2023",
-    role: "Operations Support",
-    company: "Hero Motocorp Ltd.",
-    desc: "SAP operations support for manufacturing processes, inventory management, and production planning coordination.",
+    period: "01/2021 – 10/2023",
+    role: "PPC Associate",
+    company: "Hero Moto Corp Ltd.",
+    location: "Vadodara, IN",
+    bullets: [
+      "Releasing monthly, weekly, and daily plans for production activities.",
+      "Coordinating production schedules with various departments.",
+      "Managing the flow of materials and inventory levels in SAP.",
+      "Monitored industry trends to adjust strategies and stay competitive in the market.",
+      "Provided training sessions on PPC best practices for other team members.",
+      "Developed detailed project timelines to ensure timely completion of deliverables.",
+    ],
   },
   {
-    period: "2017 – 2021",
-    role: "Technical Support",
-    company: "National Petroleum Construction Company",
-    desc: "Provided technical support for ERP systems and business process operations in a large-scale industrial environment.",
+    period: "07/2017 – 01/2019",
+    role: "Instrument Technician",
+    company: "Nation Petroleum Construction Company",
+    location: "Mussafah IDC 10, United Arab Emirates",
+    bullets: [
+      "Calibrated and maintained instrumentation for oil and gas operations.",
+      "Troubleshot equipment failures to minimize downtime during projects.",
+      "Installed new instruments and ensured compliance with safety standards.",
+      "Collaborated with engineers to optimize system performance and reliability.",
+      "Conducted routine inspections and performed preventive maintenance on devices.",
+      "Trained junior technicians on proper equipment managing and safety protocols.",
+      "Performed maintenance and repairs on a variety of process control instrumentation including transmitters, controllers, valves, switches, recorders, and indicators.",
+      "Adhered to safety and environmental requirements.",
+    ],
   },
   {
-    period: "2015 – 2017",
+    period: "07/2015 – 05/2017",
     role: "Factory Supervisor",
     company: "Tanya Galvanizers",
-    desc: "Supervised factory operations, managed production workflows, and coordinated supply chain activities.",
+    location: "Vadodara, IN",
+    bullets: [
+      "Supervised daily production activities and ensured adherence to safety protocols.",
+      "Coordinated workflow between departments to optimize production efficiency and output.",
+      "Implemented process improvements to enhance productivity and reduce waste in operations.",
+      "Managed inventory levels, ensuring timely availability of materials for production needs.",
+      "Examined final products for conformance with quality and design standards.",
+      "Organized project components according to workflow.",
+    ],
   },
 ];
 
@@ -57,7 +106,7 @@ export default function ExperienceSection() {
           className="absolute left-[7px] top-2 bottom-2 w-0.5"
           style={{ backgroundColor: "oklch(var(--border))" }}
         />
-        <div className="space-y-6">
+        <div className="space-y-8">
           {experiences.map((exp) => (
             <motion.div
               key={exp.company}
@@ -80,14 +129,30 @@ export default function ExperienceSection() {
                 {exp.role}
               </div>
               <div
-                className="text-xs font-semibold mb-1"
+                className="text-xs font-semibold mb-0.5"
                 style={{ color: "oklch(var(--sap-blue))" }}
               >
                 {exp.company}
               </div>
-              <div className="text-xs text-muted-foreground leading-relaxed">
-                {exp.desc}
+              <div className="text-xs text-muted-foreground mb-2">
+                {exp.location}
               </div>
+              <ul className="space-y-1">
+                {exp.bullets.map((b) => (
+                  <li
+                    key={b}
+                    className="text-xs text-muted-foreground leading-relaxed flex gap-2"
+                  >
+                    <span
+                      style={{ color: "oklch(var(--sap-blue))" }}
+                      className="mt-0.5 shrink-0"
+                    >
+                      •
+                    </span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
