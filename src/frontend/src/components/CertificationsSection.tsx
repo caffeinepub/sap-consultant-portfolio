@@ -41,6 +41,14 @@ const certs = [
     issuer: "Alison · CPD Certified",
     date: "24th March, 2026",
   },
+  {
+    title: "Best Performer Employee",
+    subtitle: "Certificate of Achievement — Elixrr Industries Private Limited",
+    image:
+      "/assets/img-20260330-wa0109.jpg-019d4c9a-891e-74ac-b370-43562c35fd16.jpeg",
+    issuer: "Elixrr Industries Pvt. Ltd.",
+    date: "30th March, 2026",
+  },
 ];
 
 function CertModal({
